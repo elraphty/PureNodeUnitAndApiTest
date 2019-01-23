@@ -6,8 +6,14 @@ const server = require('./lib/server');
 
 const app = {};
 
-app.init = () => {
+app.init = (callback) => {
   server.init();
+  callback();
 }
 
-app.init();
+// Self invoking only if required directly
+if(require.main === module) {
+  app.init(() => {});
+} 
+
+module.exports = app;
