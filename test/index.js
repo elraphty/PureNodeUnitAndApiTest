@@ -83,7 +83,7 @@ _app.processTest = function(limit, successes, errors) {
     console.log('****ERROR DETAILS BEGIN****')
     console.log('');
     errors.forEach(function(err) {
-      console.log('\x1b[31m0%\x1b[0m', err.name);
+      console.log('\x1b[31m%s\x1b[0m', err.name);
       console.log(err.error);
       console.log('');
     });
