@@ -13,8 +13,8 @@ _app.test.api = api;
 
 _app.countTest = function() {
   let counter = 0;
-  for(let key in app.test) {
-    if(app.test.hasOwnProperty(key)) {
+  for(let key in _app.test) {
+    if(_app.test.hasOwnProperty(key)) {
       let subTest = _app.test[key];
       for(let testName in subTest) {
         if(subTest.hasOwnProperty(testName)) {
@@ -44,7 +44,7 @@ _app.runTest = function() {
             try {
               testValue(function() {
                 // If it calls back without throwing, then it succeeded, so log it in green
-                console.log('\x1b[33m%s\[x1b[0m', testName);
+                console.log('\x1b[32m%s\x1b[0m', testName);
                 successes ++;
                 counter ++;
                 if(counter === limit) {
@@ -70,7 +70,7 @@ _app.runTest = function() {
   }
 }
 
-_app.processErrors = function(limit, successes, errors) {
+_app.processTest = function(limit, successes, errors) {
   console.log('')
   console.log('--- BEGINING OF ERROR REPORT ---');
   console.log('-----------------------------------------------');
