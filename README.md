@@ -1,4 +1,4 @@
-# PURE NODE PIZZZA API
+# PURE NODE PIZZZA API AND TEST
 An api using raw node, that allow users to place pizza orders, users should send an items payload which will be an array of objects
 
 ## Built With
@@ -11,6 +11,7 @@ An api using raw node, that allow users to place pizza orders, users should send
     * path module
     * util module
     * debug module
+    * assert
 
 # Installation.
   * Install [Nodejs](https://nodejs.org/en/download/)
@@ -105,6 +106,9 @@ An api using raw node, that allow users to place pizza orders, users should send
       Process the cart content, charge the user and send them their order receipt</td>
   </tr>
 </table>
+
+# TO RUN TEST
+### Run node test command
 
 ## License and Copyright
 &copy; elraphty (Raphael Osaze Eyerin)
